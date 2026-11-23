@@ -10,6 +10,16 @@ class Settings(BaseSettings):
 # A global instance is created that can be imported throughout the entire project
 settings = Settings()
 
-# ..... check & hit terminal
-# python -c "from app.config import settings; print(settings.app_name)"
 
+
+
+
+
+
+"""
+# ..... check & hit terminal
+ python -c "from app.config import settings; print(settings.app_name)"
+
+# ........ Check data base connected 
+python -c "from app.database import engine; conn = engine.connect(); print('Database connected successfully!'); conn.close()"
+"""
