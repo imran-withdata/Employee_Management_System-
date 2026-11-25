@@ -5,6 +5,11 @@ class Settings(BaseSettings):
     environment: str
     database_url: str
 
+    # Add JWT token
+    jwt_secret_key: str
+    jwt_algorithm: str = "HS256"
+    access_token_expire_minutes: int = 30
+
     model_config = SettingsConfigDict(env_file=".env", env_file_encoding="utf-8")
 
 # A global instance is created that can be imported throughout the entire project
